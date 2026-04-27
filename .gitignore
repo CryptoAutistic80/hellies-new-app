@@ -1,0 +1,14 @@
+.venv/
+.codex
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+samples/private/
+runs/
+
+*.tmp
+*.log
+*.pyc
