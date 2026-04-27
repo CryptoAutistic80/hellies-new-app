@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inklift"
+version = "0.1.0"
+description = "Local alpha engine for turning hand-drawn artwork into transparent sticker art and cutlines."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy>=1.26",
+  "pillow>=10.0",
+  "scikit-image>=0.22",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+vector = [
+  "vtracer>=0.6",
+]
+
+[project.scripts]
+inklift = "inklift.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["inklift*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
